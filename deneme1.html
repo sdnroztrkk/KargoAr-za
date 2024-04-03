@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>N11 Kargo</title>
+  <style>
+    .x{
+    background-color: rgba(93,61,188,255);
+    height: 100px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-box {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 10px;
+  }
+
+  .search-icon, .icon {
+    font-size: 20px;
+    margin-left: 5px;
+    color: #333;
+    cursor: pointer;
+  }
+.containerx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+  }
+  .search-box {
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 10px;
+  }
+  .search-icon, .icon {
+    font-size: 20px;
+    margin-left: 5px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .media.border h5 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #202020;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome kütüphanesi -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="x">
+    <div class="containerx">
+      <div class="search-container">
+        <input type="text" class="search-box" placeholder="Ürün, kategori, marka ara">
+        <i class="fas fa-search search-icon"></i>
+        <i class="fas fa-home icon"></i>
+        <i class="fas fa-envelope icon"></i>
+        <i class="fas fa-bell icon"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- Başlık Kısmı -->
+  <section class="py-4">
+    <div class="container">
+      <h2>Kargo & Teslimat</h2>
+    </div>
+  </section>
+
+  <!-- Ana İçerik Kısmı -->
+  <section class="py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Sol Taraftaki 3 Tab ve Akordiyon -->
+        <div class="col-md-9">
+          <div class="container">
+            <!-- Tablar -->
+            <ul class="nav nav-tabs nav-justified">
+              <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#tab1">Kargo Sorunları</a></li>
+              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab2">Kargo Takibi</a></li>
+              <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#tab3">Kargo Gönderim Süreci</a></li>
+            </ul>
+            <!-- Akordiyonlar -->
+            <div class="tab-content py-4">
+              <div id="tab1" class="tab-pane fade show active">
+                <!-- İçerik buraya gelecek -->
+                <div class="accordion" id="accordionExample1">
+                  <!-- Tab1 İçin Akordiyonlar -->
+                  <div class="card">
+                    <div class="card-header" id="headingOne1">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+                          Ürün mağaza tarafından kargoya verilmedi, ne yapabilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseOne1" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample1">
+                      <div class="card-body">
+                        Siparişiniz, tedarik süresi içinde kargoya verilmezse ürün detay sayfasından veya Hesabım menüsündeki Mevcut Sipariş sayfasından Mağazaya Soru Sor butonuna basıp mağazayla irtibata geçebilirsiniz. Hesabım sayfasındaki Canlı Destek butonuna basarak müşteri hizmetlerimizden yardım alabilirsiniz. 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Evde kimse olmadığı için ürün geri gönderilmiş. Ne yapabilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample1">
+                      <div class="card-body">
+                        Teslimat adresi bilgilerinde belirtilen kişi adına bir yakını kimlik tespitiyle kargodan ürünü  teslim alabilir. Kargo görevlileri, eğer teslimat adresinde kimseye ulaşamazsa kapıya bir pusula bırakır. Bu pusula üzerinde size teslimat yapan kargo şubesinin adres ve telefon bilgisi bulunur. Kargo şubesi, ürününüzü  3 gün boyunca bekletir ve bu süre içinde size ulaşamadığı takdirde siparişinizi geri gönderir. Adresinizde bulunmadığınız için kargonuzu teslim alamadığınızda, kargo şubenize pusuladaki bilgilerle ulaşıp ayrıntılı bilgi alabilirsiniz. Böyle durumlarda hızlı bir şekilde kargo firmasıyla irtibata geçtikten sonra tekrar kargo talebinde bulunmanızı öneririz. Ürün çoktan mağazaya ulaştıysa ürünün tekrar kargoya verilmesi için mağazayla irtibata geçebilirsiniz. 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Kargo adresini değiştirdim fakat daha önceki adrese gönderildi. Ne yapabilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample1">
+                      <div class="card-body">
+                        Eğer satın aldığınız ürün farklı bir adrese yönlendirilmişse, ürün detay sayfasından veya Hesabım menüsündeki Mevcut Sipariş sayfasından Mağazaya Soru Sor butonuna basarak mesajınızı mağazaya iletebilirsiniz. 
+Hesabım sayfasından Canlı Destek butonuna basarak müşteri hizmetlerimizden yardım alabilirsiniz
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Kargo takibi yapmak istiyorum fakat "Takip numarası bulunamadı" diyor. Ne yapabilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample1">
+                      <div class="card-body">
+                        Eğer kargo bilgileri eksik veya hatalı girilmişse ve gönderinin durumunu takip edemiyorsanız mağazayla iletişime geçebilirsiniz. Ürün detay sayfasından veya Hesabım menüsündeki Mevcut Sipariş sayfasından Mağazaya Soru Sor butonuna basarak mesajınızı mağazaya iletebilirsiniz.  
+                        Hesabım sayfasından Canlı Destek butonuna basarak müşteri hizmetlerimizden de yardım alabilirsiniz
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingFive">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Ürünüm kargolandı ancak hâlâ bana ulaşmadı. Ne yapabilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample1">
+                      <div class="card-body">
+                        Ürünün size ulaşmaması kargo firmasıyla ilgili olabilir. Konuyla ilgili olarak kargo firmasıyla görüşmeniz gerekebilir. 
+Sipariş onay sürecini uzatıp paranızın mağazaya aktarılmasını geciktirebilirsiniz. Bunun için n11 üye girişi yapıp Hesabım menüsündeki Mevcut Sipariş sayfasına gidin. Ürünün yanındaki Ödemeyi Ertele butonuna basarak sipariş onay sürecini uzatın. 
+Hesabım sayfasında yer alan Canlı Destek butonuna basarak müşteri hizmetlerinden de yardım alabilirsiniz.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingSix">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          Ürünün teslimatı gecikti ve mağazaya ulaşamıyorum. Ne yapmalıyım?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample1">
+                      <div class="card-body">
+                        Mağaza kargoya vermesine rağmen ürünün size ulaşmaması kargo firmasıyla ilgili olabilir. Konuyla ilgili olarak kargo firmasıyla görüşmeniz gerekebilir. 
+Siparişin onay sürecini uzatıp paranızın mağazaya aktarılmasını geciktirebilirsiniz. Bunun için n11 üye girişi yapıp Hesabım menüsündeki Mevcut Sipariş sayfasına gidin. Ürünün yanındaki Ödemeyi Ertele butonuna basarak sipariş onay sürecini uzatın. 
+Siparişiniz, belirtilen süre içinde kargoya verilmediyse Hesabım menüsündeki Mevcut Siparişsayfasından iptal edebilirsiniz. İptal işlemi sonrası ürün bedeli, kredi kartınız veya banka kartınız üzerinden size kesintisiz olarak iade edilecektir.
+                      </div>
+                    </div>
+                  </div>
+    
+                </div>
+              </div>
+              <div id="tab2" class="tab-pane fade">
+                <!-- İçerik buraya gelecek -->
+                <div class="accordion" id="accordionExample2">
+                  <!-- Tab2 İçin Akordiyonlar -->
+                  <div class="card">
+                    <div class="card-header" id="headingOne1">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+                          Ürün ne zaman gönderilir?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseOne1" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        Ürün detay sayfasında ve size gönderilen sipariş e-postalarında mağazanın ürünü en geç hangi tarihte kargoya vereceği belirtilir. n11’de ödeme alındıktan sonra, mağaza belirttiği süre içinde siparişi kargoya verir ve sisteme kargo bilgilerini girer. Kargo bilgileri, e-posta adresinize ve faturadaki cep telefonu numaranıza SMS ile gönderilir. Ayrıca Hesabım menüsündeki Mevcut Sipariş sayfasından da siparişin durumunu takip edebilirsiniz.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Kargo ne zaman elime ulaşır?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        Mağaza, ürünü kargoya verdikten sonra ortalama 3 iş günü içerisinde kargonuz elinize ulaşır. Resmi ve idari tatiller bu süreye dahil değildir.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Kargo takip numarasına nereden ulaşabilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        Hesabım menüsündeki Mevcut Sipariş sayfanızdan veya size gönderilen sipariş kargoya verildi konulu e-postadan kargo takip numarasına ulaşabilirsiniz. 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Kargoda olan siparişimin yerini nasıl öğrenebilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        Mağaza ürünü kargoya verdikten sonra gönderi bilgilerini sisteme girer. Kargo bilgileri, e-posta adresinize ve faturadaki cep telefonu numaranıza SMS ile gönderilir. 
+Hesabım menüsündeki Mevcut Sipariş sayfasından ürünün yanındaki Kargo Takip butonuna basarak veya kargo takip numarasının linkini tıklayarak siparişinizin yerini öğrenebilirsiniz. Kargo Takip butonun üstündeki takip numarası ile kargo şirketinin internet sitesinden de siparişinizi izleyebilirsiniz. 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingFive">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Mağazanın ürünü gönderip göndermediğini nasıl görebilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        Mağazanın ürünü kargoya verdikten sonra sisteme girdiği gönderi bilgileri, e-posta adresinize ve faturadaki cep telefonu numarasına gönderilir.
+Hesabım menüsündeki Mevcut Sipariş sayfasından ürünün yanındaki Kargo Takip butonuna basarak veya kargo takip numarasının linkini tıklayarak siparişinizin yerini öğrenebilirsiniz. Kargo Takip butonun üstündeki takip numarası ile kargo şirketinin internet sitesinden de siparişinizi izleyebilirsiniz.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingSix">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          Siparişim elime ulaşmadı, ne yapmalıyım?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample2">
+                      <div class="card-body">
+                        Mağaza siparişi kargoya verdiyse gecikme kargo firmasından kaynaklanmış olabilir. Siparişle ilgili size gönderilen e-postadan veya Hesabım menüsündeki Mevcut Sipariş sayfasından Kargo Takip butonuna basarak siparişinizin nerede olduğunu görebilirsiniz. Sipariş detayındaki Ertele butonuna basarak sipariş onay sürecini uzatabilirsiniz. 
+ Ürün detay ve Mevcut Sipariş sayfalarında yer alan Mağazaya Soru Sor butonundan mağazayla iletişime geçebilirsiniz. Mağazaya ulaşamıyorsanız n11'e üye girişi yapıp Hesabım sayfanızdan Canlı Destek uzmanıyla görüşebilirsiniz.  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="tab3" class="tab-pane fade">
+                <!-- İçerik buraya gelecek -->
+                <div class="accordion" id="accordionExample3">
+                  <!-- Tab3 İçin Akordiyonlar -->
+                  <div class="card">
+                    <div class="card-header" id="headingOne1">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseOne1" aria-expanded="false" aria-controls="collapseOne1">
+                          "Ücretsiz Kargo" olarak görünüyor. Teslimat adresinin Kıbrıs olması durumunda ücretsiz kargo geçerli midir?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseOne1" class="collapse" aria-labelledby="headingOne1" data-parent="#accordionExample3">
+                      <div class="card-body">
+                        Ücretsiz kargo seçeneği sadece Türkiye sınırları içerisindeki teslimat adresleri için geçerlidir. 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Aynı Gün Teslimat için seçtiğim saat diliminde değişiklik olur mu?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample3">
+                      <div class="card-body">
+                        Olumsuz hava koşulları, yoğun trafik gibi beklenmedik durumlarda üyeyle iletişime geçilerek teslimat saatinde değişiklik yapılabilir.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Aynı Gün Teslimat nedir?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample3">
+                      <div class="card-body">
+                        Aynı Gün Teslimat, satın aldığınız ürünlerin size aynı gün içinde dilediğiniz bir saat diliminde veya ertesi gün teslim edilmesini sağlayan hizmettir. Yalnızca Aynı Gün Teslimat logolu ürünler bu hizmete dahildir. Teslimat saatleri, seçtiğiniz bölgeye, mağazaya ve ürüne göre farklılık gösterebilir.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingFour">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                          Aynı Gün Teslimatta, teslimat görevlisi beni adresimde bulamazsa ne olur?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample3">
+                      <div class="card-body">
+                        Seçtiğiniz teslimat saatinde evde olmamanız durumunda, görevli siparişinizi bir sonraki saat aralığında teslim eder.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingFive">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                          Aynı gün teslimat ödemesini nasıl yapabilirim?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample3">
+                      <div class="card-body">
+                        Aynı gün teslimat tutarını, sepetteki ve ödeme sayfasındaki kargo ücreti alanında görebilirsiniz. Teslimat ücretini, siparişle birlikte ödeyebilirsiniz. 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingSix">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                          Birden fazla ürün satın aldığımda, hepsi birlikte gönderilebilir mi?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample3">
+                      <div class="card-body">
+                        Aynı mağazadan satın aldığınız ürünler, tedarik süreleri farklı değilse tek kargoyla birlikte gönderilir. Farklı mağazalardan alınan ürünler için tek kargo ile gönderim yapılmaz. 
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card">
+                    <div class="card-header" id="headingSeven">
+                      <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                          Durum tespit tutanağı ne işe yarar?
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample3">
+                      <div class="card-body">
+                        Durum tespit tutanağı,nünün teslimatında iade edebilmeniz için kargo görevlisine düzenletmeniz gereken edebilmeniz için gerekli evraktır. Ürününüzde eksik, arıza, kusur veya belirtilenden farklı bir durum olduğunda kargo görevlisine bu belgeyi hazırlatmalısınız. 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Sağdaki 6 Kutulu Kısım -->
+        <div class="col-md-3">
+          <div class="container">
+            <!-- 6 Kutulu Alan -->
+            <div class="row">
+              <div class="col-sm-12">
+                <!-- Konu Başlıkları -->
+                <h3 class="mt-0">Konu Başlıkları</h3>
+              </div>
+              <div class="col-sm-12">
+                <div class="media border p-3 mb-3">
+                  <span class="mr-3"><i class="fas fa-box"></i></span> <!-- İkon -->
+                  <div class="media-body"> <!-- Yazı -->
+                    <h5 class="mt-0">İptal & İade</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="media border p-3 mb-3">
+                  <span class="mr-3"><i class="fas fa-truck"></i></span>
+                  <div class="media-body">
+                    <h5 class="mt-0">Kargo & Teslimat</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="media border p-3 mb-3">
+                  <span class="mr-3"><i class="fas fa-store"></i></span> <!-- İkon -->
+                  <div class="media-body"> <!-- Yazı -->
+                    <h5 class="mt-0"> Ürün & Mağaza </h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="media border p-3 mb-3">
+                  <span class="mr-3"><i class="fas fa-credit-card"></i></span> <!-- İkon -->
+                  <div class="media-body"> <!-- Yazı -->
+                    <h5 class="mt-0">Ödeme</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="media border p-3 mb-3">
+                  <span class="mr-3"><i class="fas fa-tags"></i></span> <!-- İkon -->
+                  <div class="media-body"> <!-- Yazı -->
+                    <h5 class="mt-0">Kupon & Kampanyalar</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="media border p-3 mb-3">
+                  <span class="mr-3"><i class="fas fa-user"></i></span> <!-- İkon -->
+                  <div class="media-body"> <!-- Yazı -->
+                    <h5 class="mt-0">Üyelik</h5>
+                  </div>
+                </div>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
